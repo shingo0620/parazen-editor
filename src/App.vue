@@ -86,7 +86,11 @@
     </div>
   </div>
 
-  <div class="relative h-screen p-4 transition duration-500 ease-in-out left-64 text-gray-50" :style="`background-color: ${bgColor};`" ref="contentRef">
+  <div class="relative h-screen p-4 transition duration-500 ease-in-out max-w-screen text-gray-50"
+    :class="{ 'pl-64': !closed }"
+    :style="`background-color: ${bgColor};`"
+    ref="contentRef"
+  >
     <p>Load yout gltf content here</p>
   </div>
 
@@ -231,11 +235,9 @@ onMounted(() => {
 const sidebarHandler = () => {
   if (closed.value) {
       navRef.value.style.transform = "translateX(0px)"
-      contentRef.value.style.transform = "translateX(0px)"
       closed.value = false
   } else {
       navRef.value.style.transform = "translateX(-260px)"
-      contentRef.value.style.transform = "translateX(-260px)"
       closed.value = true
   }
 }

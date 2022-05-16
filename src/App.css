@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: 31 41 55;
+  --secondary-color: 67 56 202;
+  --contrast-color: 249 250 251;
+  --opensea-blue: 24 104 183;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 4;
+  background-color: white;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--secondary-color));
+  border-radius: 4px;
+  width: 326px;
+}

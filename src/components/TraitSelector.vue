@@ -30,16 +30,19 @@
 
       <!-- Rotations -->
       <div class="flex items-center w-full gap-2 mt-2">
-        <label class="whitespace-nowrap" :for="`${properties.name}-x-rot`">x-rot</label>
-        <input v-model.number="properties['x-rotation']" class="w-full" :id="`${properties.name}-x-rot`" type="range">
+        <label class="uppercase whitespace-nowrap" :for="`${properties.name}-x-rot`">x-rot</label>
+        <input min="-360" max="360" v-model.number="properties['x-rotation']" class="w-full" :id="`${properties.name}-x-rot`" type="range">
+        <input min="-360" max="360" v-model.number="properties['x-rotation']" class="w-12 p-1 text-xs text-center text-black rounded" type="number">
       </div>
-      <div class="flex items-center w-full gap-2">
-        <label class="whitespace-nowrap" :for="`${properties.name}-y-rot`">y-rot</label>
-        <input v-model.number="properties['y-rotation']" class="w-full" :id="`${properties.name}-y-rot`" type="range">
+      <div class="flex items-center w-full gap-2 mt-2">
+        <label class="uppercase whitespace-nowrap" :for="`${properties.name}-y-rot`">y-rot</label>
+        <input min="-360" max="360" v-model.number="properties['y-rotation']" class="w-full" :id="`${properties.name}-y-rot`" type="range">
+        <input min="-360" max="360" v-model.number="properties['y-rotation']" class="w-12 p-1 text-xs text-center text-black rounded" type="number">
       </div>
-      <div class="flex items-center w-full gap-2">
-        <label class="whitespace-nowrap" :for="`${properties.name}-z-rot`">z-rot</label>
-        <input v-model.number="properties['z-rotation']" class="w-full" :id="`${properties.name}-z-rot`" type="range">
+      <div class="flex items-center w-full gap-2 mt-2">
+        <label class="uppercase whitespace-nowrap" :for="`${properties.name}-z-rot`">z-rot</label>
+        <input min="-360" max="360" v-model.number="properties['z-rotation']" class="w-full" :id="`${properties.name}-z-rot`" type="range">
+        <input min="-360" max="360" v-model.number="properties['z-rotation']" class="w-12 p-1 text-xs text-center text-black rounded" type="number">
       </div>
     </div>
   </div>

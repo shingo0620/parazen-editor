@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <!-- Traits 類別名稱 -->
-    <div class="flex items-center px-2 py-1 text-white cursor-pointer bg-secondary" @click="toggleExpand()">
+    <div class="flex items-center p-2 text-white cursor-pointer bg-secondary" @click="toggleExpand()">
       <h3 class="whitespace-nowrap">{{ name }}</h3>
       <div class="ml-auto">
         <ChevronDown v-if="!isExpended" />
@@ -14,35 +14,35 @@
       <div class="flex gap-2">
         <div class="relative w-full">
           <label :for="`${properties.name}-x-pos`" class="absolute px-1 text-xs text-black border border-black rounded pointer-events-none left-2 -top-2 bg-gray-50">X-POS</label>
-          <input :id="`${properties.name}-x-pos`" v-model.number="properties['x-position']" type="number" class="w-full px-1 pt-2 pb-1 text-black border-2 rounded border-primary bg-gray-50">
+          <input :id="`${properties.name}-x-pos`" v-model.number="properties['x-position']" type="number" class="w-full px-1 pt-2 pb-1 text-center text-black border-2 rounded border-primary bg-gray-50">
         </div>
 
         <div class="relative w-full">
           <label :for="`${properties.name}-y-pos`" class="absolute px-1 text-xs text-black border border-black rounded pointer-events-none left-2 -top-2 bg-gray-50">Y-POS</label>
-          <input :id="`${properties.name}-y-pos`" v-model.number="properties['y-position']" type="number" class="w-full px-1 pt-2 pb-1 text-black border-2 rounded border-primary bg-gray-50">
+          <input :id="`${properties.name}-y-pos`" v-model.number="properties['y-position']" type="number" class="w-full px-1 pt-2 pb-1 text-center text-black border-2 rounded border-primary bg-gray-50">
         </div>
 
         <div class="relative w-full">
           <label :for="`${properties.name}-z-pos`" class="absolute px-1 text-xs text-black border border-black rounded pointer-events-none left-2 -top-2 bg-gray-50">Z-POS</label>
-          <input :id="`${properties.name}-z-pos`" v-model.number="properties['z-position']" type="number" class="w-full px-1 pt-2 pb-1 text-black border-2 rounded border-primary bg-gray-50">
+          <input :id="`${properties.name}-z-pos`" v-model.number="properties['z-position']" type="number" class="w-full px-1 pt-2 pb-1 text-center text-black border-2 rounded border-primary bg-gray-50">
         </div>
       </div>
 
       <!-- Rotations -->
       <div class="flex items-center w-full gap-2 mt-2">
         <label class="uppercase whitespace-nowrap" :for="`${properties.name}-x-rot`">x-rot</label>
-        <input min="-360" max="360" v-model.number="properties['x-rotation']" class="w-full" :id="`${properties.name}-x-rot`" type="range">
-        <input min="-360" max="360" v-model.number="properties['x-rotation']" class="w-12 p-1 text-xs text-center text-black rounded" type="number">
+        <input min="-360" max="360" v-model.number="properties['x-rotate']" class="w-full" :id="`${properties.name}-x-rot`" type="range">
+        <input min="-360" max="360" v-model.number="properties['x-rotate']" class="w-12 p-1 text-xs text-center text-black rounded" type="number">
       </div>
       <div class="flex items-center w-full gap-2 mt-2">
         <label class="uppercase whitespace-nowrap" :for="`${properties.name}-y-rot`">y-rot</label>
-        <input min="-360" max="360" v-model.number="properties['y-rotation']" class="w-full" :id="`${properties.name}-y-rot`" type="range">
-        <input min="-360" max="360" v-model.number="properties['y-rotation']" class="w-12 p-1 text-xs text-center text-black rounded" type="number">
+        <input min="-360" max="360" v-model.number="properties['y-rotate']" class="w-full" :id="`${properties.name}-y-rot`" type="range">
+        <input min="-360" max="360" v-model.number="properties['y-rotate']" class="w-12 p-1 text-xs text-center text-black rounded" type="number">
       </div>
       <div class="flex items-center w-full gap-2 mt-2">
         <label class="uppercase whitespace-nowrap" :for="`${properties.name}-z-rot`">z-rot</label>
-        <input min="-360" max="360" v-model.number="properties['z-rotation']" class="w-full" :id="`${properties.name}-z-rot`" type="range">
-        <input min="-360" max="360" v-model.number="properties['z-rotation']" class="w-12 p-1 text-xs text-center text-black rounded" type="number">
+        <input min="-360" max="360" v-model.number="properties['z-rotate']" class="w-full" :id="`${properties.name}-z-rot`" type="range">
+        <input min="-360" max="360" v-model.number="properties['z-rotate']" class="w-12 p-1 text-xs text-center text-black rounded" type="number">
       </div>
     </div>
   </div>
